@@ -1,0 +1,200 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #eee;
+}
+
+.inner_section_banner {
+  background: url(assets/images/1.jpg)no-repeat center 0px;
+  min-height: 450px;
+  .bnr-agileinfo{
+    min-height: 450px;
+  }
+}
+
+
+.slider_top{
+  position: relative;
+  top: -73px;
+}
+
+.floating_btn{
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 60%;
+  text-align: center;
+  max-width: 500px;
+}
+
+.card {
+  width: 99%;
+   min-height: 530px;
+   height: auto;
+  float: left;
+  perspective: 450px;
+  .front{
+    padding-top: 50px;
+    @extend .doctor_card;
+          h3{
+        padding-top: 50px;
+        padding-bottom: 15px;
+      }
+    .doctor_short_info{
+      padding:0px 20px 40px 20px;
+    }
+    .profile{
+      img{
+        width: 120px;
+        border-radius: 50%;
+        border: 3px solid #2d5e8f;
+      }
+    }
+  }
+  .back {
+    @extend .doctor_card;
+    background: #fff;
+    color: #000;
+    transform: rotateY( 180deg );
+    .longdetails{
+       padding: 45px 20px;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.doctor_card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: #03446A;
+  text-align: center;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+// ============ margin and Padding Code Start   Here  =================
+
+.mrg_tb_40{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+.mrg_t_40{
+  margin-top:40px;
+}
+.m_r_10{
+  margin-right: 10px!important;
+}
+.m_t_40{
+  margin-top: 40px;
+}
+.p_rl_5{
+  padding:5px 0px;
+}
+.m_t_10{
+  margin-top: 10px;
+}
+// ============ margin and Padding Code Start   Here  =================
+
+.dunderline{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin: 40px 0px 40px 0;
+}
+.doctorsearch_part{
+  padding: 45px 0px;
+}
+.doctortype_bg{
+  width: 80%;
+}
+.main_title{
+  i{
+    font-size: 36px!important;
+    position: relative;
+    top: 7px;
+  }
+ h1{
+  font-size: 20px!important;
+  color: #4CAF50;
+  border-bottom: 3px solid #4caf5070;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+ }
+}
+.sub_title{
+  font-size: 18px;
+    color: #757575;
+}
+
+.theme_btn{
+  background: #4CAF50;
+  border-radius: 20px!important;
+  min-width: 200px!important;
+  padding: 0px 4px!important;
+  color: #fff;
+  border: 2px solid #52af50!important;
+  &:hover{
+    background: #fff;
+    color: #4CAF50;
+    border: 2px solid #52af50!important;
+    box-shadow: 0px 5px 12px #808080b8;
+  }
+}
+.float_right{
+  float: right;
+}
+.loaction_img{
+  height: 200px;
+  width: 100%;
+}
+
+.patient_portal_table{
+  table{
+    width: 100%;
+  }
+}
+
+.availble_time_card{
+  padding-top: 40px;
+  mat-card{
+    border: 2px solid #fff;
+    // background-color: #eeeeee;
+    &:hover{
+      border: 2px solid #4CAF50;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit{
+  background: #4CAF50!important;
+}
+.mat-step-icon{
+  height: 50px!important;
+  width: 50px!important;
+}
